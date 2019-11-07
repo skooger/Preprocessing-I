@@ -56,38 +56,72 @@ table {
 html, body {
     height: 100%;
 }
+@primary-color:darkcyan;
+.flex-class{
+	display:flex;
+	justify-content: space-around;
+}
+.about-flex-class{
+	display:flex;
+	flex-direction: column;
+	align-content: center;
+}
+.bg-img{
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.input-select-text{
+	width: 100%; 
+	padding: 12px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box; 
+	margin-top: 6px; 
+	margin-bottom: 16px; 
+	resize: vertical; 
+}
+.submit-input{
+	background-color: @primary-color;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.h1-after{
+	content: "";
+	display: block; 
+	margin: 0 auto; 
+	padding-top: 20px; 
+	border-bottom: 1px solid white; 
+}
+
+
 @media (min-width:901px){
 	.topnav{
-		display:flex;
-		justify-content: space-around;
+		.flex-class();
 		padding:3%;
 		a{
-			color: darkcyan;
+			color: @primary-color;
 			text-decoration: none;
 		}
 		nav{
 			width:70%;
-			display:flex;
-			justify-content: space-around;
+			.flex-class();
 		}
 		nav a{
 		
-			color: darkcyan;
+			color: @primary-color;
 			text-decoration: none;
 		}
 		.icon{
 			display:none;
 		}
 	}//end of topnav
-	a.active {
-		background-color: white;
-		color: darkcyan;
-	}
 	.hero-container{
 		height:100vh;
 		background-image: url("../images/bg-image-desktop.jpg");
-		background-size: 100%;
-		background-repeat: no-repeat;
+		.bg-img();
 		h1{
 			text-align: center;
 			color:white;
@@ -97,12 +131,8 @@ html, body {
 			
 		}
 		h1::after{
-			content: "";
-			display: block; 
-			margin: 0 auto; 
+			.h1-after();
 			width: 20%; 
-			padding-top: 20px; 
-			border-bottom: 1px solid white; 
 		}
 		p{
 			text-align:center;
@@ -112,9 +142,7 @@ html, body {
 	}//end of hero container
 	.about{
 		padding-bottom: 6%;
-		display:flex;
-		flex-direction: column;
-		align-content: center;
+		.about-flex-class();
 		h2{
 			text-align:center;
 			font-size: 3.5rem;
@@ -124,7 +152,7 @@ html, body {
 		h3{
 			text-align:center;
 			padding:2%;
-			color:darkcyan;
+			color:@primary-color;
 			font-size: 1.9rem;
 		}
 		.portfolio-img-container{
@@ -139,13 +167,13 @@ html, body {
 		p{
 			text-align: center;
 			padding-top:5%;
-			color:darkcyan;
+			color:@primary-color;
 			font-size: 1.6rem;
 		}
 	}//end of about
 	.skills{
 		padding:5%;
-		background-color: darkcyan;
+		background-color: @primary-color;
 		
 		h2{
 			text-align: center;
@@ -167,7 +195,7 @@ html, body {
 		text-align: center;
 		h2{
 			font-size: 3.5rem;
-			color:darkcyan;
+			color:@primary-color;
 			font-weight: bold;
 		}
 		.project-row{
@@ -189,7 +217,7 @@ html, body {
 		}
 		p{
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 			font-size:1.5rem;
 		}
 		.project-container{
@@ -209,25 +237,13 @@ html, body {
 			text-align: center;
 			font-size: 1.5rem;
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 		input[type=text], select, textarea {
-			width: 100%; 
-			padding: 12px; 
-			border: 1px solid #ccc; 
-			border-radius: 4px; 
-			box-sizing: border-box; 
-			margin-top: 6px; 
-			margin-bottom: 16px; 
-			resize: vertical; 
+			.input-select-text();
 		}
 		input[type=submit] {
-			background-color: darkcyan;
-			color: white;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
+			.submit-input();
 		}
   
 		input[type=submit]:hover {
@@ -242,25 +258,21 @@ html, body {
 	
 }
 
-
-
 @media (max-width: 901px) and (min-width: 600px) {
 	.topnav{
-		display:flex;
-		justify-content: space-around;
+		.flex-class();
 		padding:3%;
 		a{
-			color: darkcyan;
+			color: @primary-color;
 			text-decoration: none;
 		}
 		nav{
 			width:70%;
-			display:flex;
-			justify-content: space-around;
+			.flex-class();
 		}
 		nav a{
 		
-			color: darkcyan;
+			color: @primary-color;
 			text-decoration: none;
 		}
 		.icon{
@@ -269,10 +281,9 @@ html, body {
 	}//end of topnav
 	
 	.hero-container{
-		height:100vh;
+		height:80vh;
 		background-image: url("../images/bg-image-desktop.jpg");
-		background-size: 100%;
-		background-repeat: no-repeat;
+		.bg-img();
 		h1{
 			text-align: center;
 			color:white;
@@ -282,12 +293,8 @@ html, body {
 			
 		}
 		h1::after{
-			content: "";
-			display: block; 
-			margin: 0 auto; 
+			.h1-after();
 			width: 50%; 
-			padding-top: 20px; 
-			border-bottom: 1px solid white; 
 		}
 		p{
 			text-align:center;
@@ -298,9 +305,7 @@ html, body {
 	
 	.about{
 		padding-bottom: 6%;
-		display:flex;
-		flex-direction: column;
-		align-content: center;
+		.about-flex-class();
 		h2{
 			text-align:center;
 			font-size: 2.5rem;
@@ -310,7 +315,7 @@ html, body {
 		h3{
 			text-align:center;
 			padding:2%;
-			color:darkcyan;
+			color:@primary-color;
 			font-size: 1.3rem;
 		}
 		.portfolio-img-container{
@@ -325,13 +330,13 @@ html, body {
 		p{
 			text-align: center;
 			padding-top:5%;
-			color:darkcyan;
+			color:@primary-color;
 			font-size: 1.2rem;
 		}
 	}//end of about
 	.skills{
 		padding:5%;
-		background-color: darkcyan;
+		background-color: @primary-color;
 		
 		h2{
 			text-align: center;
@@ -353,7 +358,7 @@ html, body {
 		text-align: center;
 		h2{
 			font-size: 2rem;
-			color:darkcyan;
+			color:@primary-color;
 			font-weight: bold;
 		}
 		.project-row{
@@ -374,7 +379,7 @@ html, body {
 		}
 		p{
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 		.project-container{
 			width:50%;
@@ -391,25 +396,13 @@ html, body {
 			text-align: center;
 			font-size: 1.5rem;
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 		input[type=text], select, textarea {
-			width: 100%; 
-			padding: 12px; 
-			border: 1px solid #ccc; 
-			border-radius: 4px; 
-			box-sizing: border-box; 
-			margin-top: 6px; 
-			margin-bottom: 16px; 
-			resize: vertical; 
+			.input-select-text();
 		}
 		input[type=submit] {
-			background-color: darkcyan;
-			color: white;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
+			.submit-input();
 		}
   
 		input[type=submit]:hover {
@@ -442,7 +435,7 @@ html, body {
 			display: block;
 		}
 		a.icon {
-			background: darkcyan;
+			background: @primary-color;
 			display: block;
 			position: absolute;
 			right: 0;
@@ -455,13 +448,12 @@ html, body {
 	}//end of topnav
 	a.active {
 		background-color: white;
-		color: darkcyan;
+		color: @primary-color;
 	}
 	.hero-container{
-		height:100vh;
+		height:50vh;
 		background-image: url("https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-		background-size: 100%;
-		background-repeat: no-repeat;
+		.bg-img();
 		h1{
 			text-align: center;
 			color:white;
@@ -471,12 +463,8 @@ html, body {
 			
 		}
 		h1::after{
-			content: "";
-			display: block; 
-			margin: 0 auto; 
+			.h1-after();
 			width: 50%; 
-			padding-top: 20px; 
-			border-bottom: 1px solid white; 
 		}
 		p{
 			text-align:center;
@@ -485,6 +473,7 @@ html, body {
 	}//end of hero container
 	.about{
 		padding-bottom: 6%;
+		.about-flex-class();
 		h2{
 			text-align:center;
 			font-size: 1.5rem;
@@ -494,7 +483,7 @@ html, body {
 		h3{
 			text-align:center;
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 		img{
 			max-width: 100%;
@@ -505,12 +494,12 @@ html, body {
 		p{
 			text-align: center;
 			padding-top:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 	}//end of about
 	.skills{
 		padding:5%;
-		background-color: darkcyan;
+		background-color: @primary-color;
 		
 		h2{
 			text-align: center;
@@ -533,7 +522,7 @@ html, body {
 		text-align: center;
 		h2{
 			font-size: 2rem;
-			color:darkcyan;
+			color:@primary-color;
 			font-weight: bold;
 		}
 		.project-row{
@@ -554,7 +543,7 @@ html, body {
 		}
 		p{
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 		.project-container{
 			width:50%;
@@ -571,25 +560,13 @@ html, body {
 			text-align: center;
 			font-size: 1.5rem;
 			padding:5%;
-			color:darkcyan;
+			color:@primary-color;
 		}
 		input[type=text], select, textarea {
-			width: 100%; 
-			padding: 12px; 
-			border: 1px solid #ccc; 
-			border-radius: 4px; 
-			box-sizing: border-box; 
-			margin-top: 6px; 
-			margin-bottom: 16px; 
-			resize: vertical; 
+			.input-select-text();
 		}
 		input[type=submit] {
-			background-color: darkcyan;
-			color: white;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
+			.submit-input();
 		}
   
 		input[type=submit]:hover {
@@ -601,6 +578,8 @@ html, body {
 		padding:8%;
 	}// end of footer
 }//end of mobile media query
+
+//had 660 lines before refactor
 
 
 
