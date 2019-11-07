@@ -172,6 +172,15 @@ body {
   padding-top: 20px;
   border-bottom: 1px solid white;
 }
+.white-center {
+  text-align: center;
+  color: white;
+}
+.flex-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 @media (min-width: 901px) {
   .topnav {
     display: flex;

@@ -52,7 +52,6 @@ table {
 * {
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
 }
@@ -95,6 +94,15 @@ html, body {
 	padding-top: 20px; 
 	border-bottom: 1px solid white; 
 }
+.white-center{
+	text-align:center;
+	color:white;
+}
+.flex-wrap-center{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 
 @media (min-width:901px){
@@ -123,8 +131,7 @@ html, body {
 		background-image: url("../images/bg-image-desktop.jpg");
 		.bg-img();
 		h1{
-			text-align: center;
-			color:white;
+			.white-center();
 			font-size: 2.5rem;
 			padding-top:15%;
 			margin-bottom:2%;
@@ -135,8 +142,7 @@ html, body {
 			width: 20%; 
 		}
 		p{
-			text-align:center;
-			color:white;
+			.white-center();
 			font-size: 1.5rem;
 		}
 	}//end of hero container
@@ -174,16 +180,12 @@ html, body {
 	.skills{
 		padding:5%;
 		background-color: @primary-color;
-		
 		h2{
-			text-align: center;
-			color:white;
+			.white-center();
 			font-size:2rem;
 		}
 		.skills-container{
-			display:flex;
-			flex-wrap: wrap;
-			justify-content: center;
+			.flex-wrap-center();
 		}
 		.skill-box{
 			padding:8%;
@@ -199,9 +201,7 @@ html, body {
 			font-weight: bold;
 		}
 		.project-row{
-			display:flex;
-			flex-wrap: wrap;
-			justify-content: center;
+			.flex-wrap-center();
 		}
 		.img-container{
 			max-height:400px;
@@ -245,7 +245,6 @@ html, body {
 		input[type=submit] {
 			.submit-input();
 		}
-  
 		input[type=submit]:hover {
 			background-color: #45a049;
 		}
@@ -254,8 +253,6 @@ html, body {
 		text-align: center;
 		padding:2%;
 	}// end of footer
-	
-	
 }
 
 @media (max-width: 901px) and (min-width: 600px) {
@@ -279,26 +276,22 @@ html, body {
 			display:none;
 		}
 	}//end of topnav
-	
 	.hero-container{
 		height:80vh;
 		background-image: url("../images/bg-image-desktop.jpg");
 		.bg-img();
 		h1{
-			text-align: center;
-			color:white;
+			.white-center();
 			font-size: 2.5rem;
 			padding-top:20%;
 			margin-bottom: 2%;
-			
 		}
 		h1::after{
 			.h1-after();
 			width: 50%; 
 		}
 		p{
-			text-align:center;
-			color:white;
+			.white-center();
 			font-size: 1.3rem;
 		}
 	}//end of hero container
@@ -337,16 +330,12 @@ html, body {
 	.skills{
 		padding:5%;
 		background-color: @primary-color;
-		
 		h2{
-			text-align: center;
-			color:white;
+			.white-center();
 			font-size:2rem;
 		}
 		.skills-container{
-			display:flex;
-			flex-wrap: wrap;
-			justify-content: center;
+			.flex-wrap-center();
 		}
 		.skill-box{
 			padding:8%;
@@ -385,10 +374,8 @@ html, body {
 			width:50%;
 			padding:3%;
 		}
-		
 	}//end of work history
 	.contact{
-		
 		border-radius: 5px;
 		background-color: #f2f2f2;
 		padding: 20px;
@@ -455,20 +442,17 @@ html, body {
 		background-image: url("https://images.pexels.com/photos/1450082/pexels-photo-1450082.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
 		.bg-img();
 		h1{
-			text-align: center;
-			color:white;
+			.white-center();
 			font-size: 1.5rem;
 			padding-top:40%;
 			margin-bottom:8%;
-			
 		}
 		h1::after{
 			.h1-after();
 			width: 50%; 
 		}
 		p{
-			text-align:center;
-			color:white;
+			.white-center();
 		}
 	}//end of hero container
 	.about{
@@ -500,16 +484,12 @@ html, body {
 	.skills{
 		padding:5%;
 		background-color: @primary-color;
-		
 		h2{
-			text-align: center;
-			color:white;
+			.white-center();
 			font-size:2rem;
 		}
 		.skills-container{
-			display:flex;
-			flex-wrap: wrap;
-			justify-content: center;
+			.flex-wrap-center();
 		}
 		.skill-box{
 			padding:8%;
@@ -549,7 +529,6 @@ html, body {
 			width:50%;
 			padding:3%;
 		}
-		
 	}//end of work history
 	.contact{
 		
@@ -568,7 +547,6 @@ html, body {
 		input[type=submit] {
 			.submit-input();
 		}
-  
 		input[type=submit]:hover {
 			background-color: #45a049;
 		}
